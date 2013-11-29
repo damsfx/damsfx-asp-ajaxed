@@ -22,6 +22,13 @@
 'The text which appears when a callback is being performed and the user has to wait
 	'AJAXED_LOADINGTEXT = "loading..."
 
+'should the JavaScript library (prototype or jquery or others) be automatically loaded on every page?
+'	The console still relies on prototype.
+	'AJAXED_LOADJS = true
+
+'should the prototype JavaScript library be automatically loaded on every page?
+	'AJAXED_JSENGINE = "jquery"
+
 'should the prototype JavaScript library be automatically loaded on every page?
 	'AJAXED_LOADPROTOTYPEJS = true
 
@@ -36,7 +43,7 @@
 
 'In case you need logging, set the logging level
 '	(0 = disabled, 1 = all messages, 2 = info, warn & errors, 4 = errors and warns, 8 = only errors)
-	'AJAXED_LOGLEVEL = 1
+	' AJAXED_LOGLEVEL = 1
 
 'Advanced: should the codepage be set to the session directly?
 'this is only recommended if you have IIS5 or lower which does not support

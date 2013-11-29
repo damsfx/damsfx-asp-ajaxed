@@ -96,7 +96,7 @@ end sub
 sub main() %>
 
 	<%
-	tf.assertEqual lib.page.loadPrototypeJS, true, "prototypeJS must be loaded by default"
+	tf.assertEqual lib.page.loadJS, true, "prototypeJS must be loaded by default"
 	tf.assert not p.isPostback(), "No postback possible here!"
 	tf.assert initialized, "init() has not been exectuted"
 	%>

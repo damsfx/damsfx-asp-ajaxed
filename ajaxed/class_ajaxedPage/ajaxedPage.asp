@@ -77,7 +77,8 @@ class AjaxedPage
 	private ajaxHeaderDrawn, sessionCodePage, p_callbackType
 	
 	'public members
-	public loadPrototypeJS		''[bool] should protypeJS library be loaded. Turn this off if you've done it manually (e.g. in your <em>header.asp</em>). default = TRUE
+	public loadJS				''[bool] should JS library be loaded. Turn this off if you've done it manually (e.g. in your <em>header.asp</em>). default = TRUE
+	public jsEngine				''[string] Name of the javascript engine. default = 'prototype'
 	public buffering			''[bool] turns the <em>response.buffering </em>on or off (no affect on callback). default = TRUE
 	public contentType			''[string] contenttype of the response. default = EMPTY
 	public debug				''[bool] turns debugging on of. default = FALSE
@@ -127,7 +128,8 @@ class AjaxedPage
 		set lib.page = me
 		set jason = new JSON
 		jason.toResponse = true
-		loadPrototypeJS = lib.init(AJAXED_LOADPROTOTYPEJS, true)
+		loadJS = lib.init(AJAXED_LOADJS, true)
+		jsEngine = lib.init(AJAXED_JSENGINE, "prototype")
 		status = -1
 		buffering = lib.init(AJAXED_BUFFERING, true)
 		set loadedSources = server.createObject("scripting.dictionary")
@@ -291,8 +293,8 @@ class AjaxedPage
 	'' @PARAM:			params [array]: not used yet, provide empty array array()
 	'******************************************************************************************************************
 	public sub ajaxedHeader(params)
-		if loadPrototypeJS then loadJSFile(lib.path("prototypejs/prototype.js"))
-		loadJSFile(lib.path("class_ajaxedPage/ajaxed.js"))
+		if loadJS then loadJSFile(lib.path("js/"& jsEngine &".js"))
+		loadJSFile(lib.path("class_ajaxedPage/ajaxed-"& jsEngine &".js"))
 		execJS(array(_
 			"ajaxed.prototype.debug = " & lib.iif(debug, "true", "false") & ";",_
 			"ajaxed.prototype.indicator.innerHTML = '" & str.JSEncode(loadingText) & "';"_

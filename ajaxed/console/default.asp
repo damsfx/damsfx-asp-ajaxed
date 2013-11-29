@@ -17,7 +17,7 @@ sub header()
 	page.loadCSSFile "std.css", empty
 	page.loadCSSFile "screen_borderstyles.css", empty
 	page.loadJSFile "console.js"
-	page.loadJSFile "../script.aculo.us/scriptaculous.js"
+	page.loadJSFile "../js/script.aculo.us/scriptaculous.js"
 end sub
 
 '******************************************************************************************

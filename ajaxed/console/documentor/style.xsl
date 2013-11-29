@@ -8,7 +8,7 @@
 				<link rel="shortcut icon" href="/ajaxed/console/documentor/icon.png" type="image/ico" />
 				<meta name="Generator" content="ASP Documentor" />
 				<meta name="description" content="ASP Documentor - documentation for classic ASP (VBScript)" />
-				<script src="/ajaxed/prototypejs/prototype.js"></script>
+				<script src="/ajaxed/js/prototype.js"></script>
 				<link rel="stylesheet" type="text/css" href="/ajaxed/console/documentor/code_highlight.css" />
 				<script src="/ajaxed/console/documentor/highlight/highlight.js"></script>
 				<script>

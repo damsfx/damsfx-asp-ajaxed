@@ -1,4 +1,12 @@
-﻿v 2.1
+﻿v 2.1.2
+[27 Nomvember, 2013] [damien MATHIEU <damsfx#gmail.com>]
+- configuration variable for Javascript engine choice added: AJAXED_JSENGINE. 
+	Possibility to switch to jQuery 1.9.1
+- configuration variable for Javascript engine choice added: AJAXED_LOADJS. 
+- depreciated: AJAXED_LOADPROTOTYPEJS. 
+	replace by AJAXED_LOADJS
+
+v 2.1
 - DataContainer.add() method added. This is a useful short method which allows us adding items to a datacontainer.
 	cool e.g. when you need an extendable array: 
 	set dc = (new DataContainer)(array())
